@@ -35,9 +35,6 @@
         <el-table-column label="姓名" prop="name"></el-table-column>
         <el-table-column label="邮箱" prop="email"></el-table-column>
         <el-table-column label="电话" prop="telephone"></el-table-column>
-<<<<<<< HEAD
-        <el-table-column label="角色" prop="role"></el-table-column>
-=======
         <el-table-column label="角色" prop="role">
           <template v-slot="scope">
             <div v-if="scope.row.roles !== null">
@@ -45,7 +42,6 @@
             </div>
           </template>
         </el-table-column>
->>>>>>> login
         <el-table-column label="状态" prop="status">
           <template v-slot="scope">
             <div>
@@ -85,10 +81,7 @@
                   type="warning"
                   icon="el-icon-setting"
                   size="mini"
-<<<<<<< HEAD
-=======
                   @click="showSetRolesDialog(scope.row)"
->>>>>>> login
                 ></el-button>
               </el-button>
             </el-tooltip>
@@ -140,9 +133,6 @@
         <el-button type="primary" @click="addUser">确 定</el-button>
       </span>
     </el-dialog>
-<<<<<<< HEAD
-=======
-
     <!-- 分配角色的对话框 -->
     <el-dialog
       title="分配角色"
@@ -173,7 +163,6 @@
         >
       </span>
     </el-dialog>
->>>>>>> login
   </div>
 </template>
 
@@ -216,15 +205,12 @@ export default {
       isAddDialogVisible: false,
       // 控制修改用户对话框的显示与隐藏
       editDialogVisible: false,
-<<<<<<< HEAD
-=======
       // 控制分配角色对话框的显示与隐藏
       setRolesdialogVisible: false,
       // 分配角色中的角色下拉框选项信息
       setRoles: [],
       // 分配角色中已选中的角色id值
       selectedRoleId: '',
->>>>>>> login
       // 控制用户对话框的提示信息title
       title: '添加用户',
       // 作为变更用户信息成功与否的信息反馈
@@ -237,11 +223,8 @@ export default {
         email: '',
         telephone: ''
       },
-<<<<<<< HEAD
-=======
       // 分配角色的对象
       userInfo: [],
->>>>>>> login
       // 添加表单的验证规则对象
       addUserRules: {
         name: [
@@ -333,16 +316,6 @@ export default {
       this.$axios
         .put(
           `http://localhost:8081/users/changeStatus?id=${userInfo.id}&status=${userInfo.status}`
-<<<<<<< HEAD
-          // 'http://localhost:8081/users/changeStatus',
-          // {
-          //   params: {
-          //     status: userInfo.status,
-          //     id: userInfo.id
-          //   }
-          // }
-=======
->>>>>>> login
         )
         .then(res => {
           if (res.data.code === 200) {
@@ -460,8 +433,6 @@ export default {
             message: '已取消删除'
           })
         })
-<<<<<<< HEAD
-=======
     },
     // 分配角色
     showSetRolesDialog(userInfo) {
@@ -489,7 +460,6 @@ export default {
             this.getUserList()
           }
         })
->>>>>>> login
     }
   }
 }
