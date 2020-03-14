@@ -134,7 +134,11 @@ export default {
                   authName: '权限列表',
                   id: 204,
                   order: 2,
+<<<<<<< HEAD
                   path: 'powers'
+=======
+                  path: 'rights'
+>>>>>>> login
                 }
               ]
             },
