@@ -11,7 +11,11 @@ Vue.use(Button)
 //   Form,
 //   FormItem,
 //   Input,
-//   Message
+//   Message,
+//   Container,
+//   Header,
+//   Aside,
+//   Main
 // } from 'element-ui'
 // Vue.use(Form)
 // Vue.use(FormItem)

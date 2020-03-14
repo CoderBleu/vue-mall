@@ -3,7 +3,7 @@
     <div class="login_box">
       <!-- 头像区域 -->
       <div class="avatar_box">
-        <img src="../assets/logo.png" alt />
+        <img src="../assets/logo.png" alt/>
       </div>
       <!-- 登录表单区域 :ref相当于dom返回对象，可以用于重置表格 :model绑定熟悉class- loginForm-->
       <el-form
@@ -63,14 +63,14 @@ export default {
       this.$refs.loginFormRef.validate(async valid => {
         if (valid) {
           this.$axios
-            .get('http://106.12.11.162:8888/api/private/v1/login', {
+            .get('/login', {
               params: {
                 username: this.loginForm.username,
                 password: this.loginForm.password
               }
             })
             .then(res => {
-              console.log(res.data)
+              // console.log(res.data)
               if (res.data.meta.status === 200) {
                 this.$message.success(res.data.meta.msg)
                 // 1.将登陆成功之后的 token，保存到客户端的 sessionStorage中
@@ -91,56 +91,57 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.login_container {
-  background: #2b4b6b;
-  height: 100%;
-}
-
-.login_box {
-  width: 450px;
-  height: 300px;
-  background-color: #fff;
-  border-radius: 3px;
-  // 居中方式
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  // 相对于自身长宽移动50%
-  transform: translate(-50%, -50%);
-}
-
-.avatar_box {
-  height: 130px;
-  width: 130px;
-  border: 1px solid #eee;
-  border-radius: 50%;
-  padding: 10px;
-  // 添加阴影
-  box-shadow: 0 0 10px #ddd;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  img {
-    width: 100%;
+  .login_container {
+    background: #2b4b6b;
     height: 100%;
-    border-radius: 50%;
-    background-color: #eee;
   }
-}
 
-.login_form {
-  position: absolute;
-  // 让盒子在底部区域
-  bottom: 0;
-  width: 100%;
-  padding: 0 20px;
-  // 盒子溢出，居中处理
-  box-sizing: border-box;
-}
+  .login_box {
+    width: 450px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 3px;
+    // 居中方式
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    // 相对于自身长宽移动50%
+    transform: translate(-50%, -50%);
+  }
 
-.btns {
-  display: flex;
-  justify-content: flex-end;
-}
+  .avatar_box {
+    height: 130px;
+    width: 130px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    padding: 10px;
+    // 添加阴影
+    box-shadow: 0 0 10px #ddd;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #eee;
+    }
+  }
+
+  .login_form {
+    position: absolute;
+    // 让盒子在底部区域
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px;
+    // 盒子溢出，居中处理
+    box-sizing: border-box;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: flex-end;
+  }
 </style>
