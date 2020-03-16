@@ -69,14 +69,12 @@
             type="primary"
             icon="el-icon-edit"
             size="mini"
-            @click="showEditDialog(scope.row)"
             >编辑</el-button
           >
           <el-button
             type="danger"
             icon="el-icon-delete"
             size="mini"
-            @click="showDeleteDialog(scope.row.id)"
             >删除</el-button
           >
           <el-tooltip
@@ -129,6 +127,7 @@
       title="添加角色"
       :visible.sync="addRolesDialogVisible"
       width="50%"
+      @close="addRolesCloseDialog"
     >
       <el-form
         :model="addRolesRuleForm"
@@ -304,7 +303,6 @@ export default {
         .put('http://localhost:8081/roles/expandTree', params)
         .then(res => {
           if (res.data.code === 200) {
-            this.$message.success('展开成功')
           }
         })
     },
@@ -321,6 +319,10 @@ export default {
           this.addRolesDialogVisible = false
         }
       })
+    },
+    // 添加角色对话框关闭
+    addRolesCloseDialog() {
+      this.$refs.addRolesRuleForm.resetFields()
     }
   }
 }

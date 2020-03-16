@@ -134,11 +134,7 @@ export default {
                   authName: '权限列表',
                   id: 204,
                   order: 2,
-<<<<<<< HEAD
-                  path: 'powers'
-=======
                   path: 'rights'
->>>>>>> login
                 }
               ]
             },
@@ -164,7 +160,7 @@ export default {
                   authName: '商品分类',
                   id: 198,
                   order: 2,
-                  path: 'goodsClass'
+                  path: 'categories'
                 }
               ]
             },
