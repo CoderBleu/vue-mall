@@ -148,13 +148,7 @@ export default {
                   authName: '商品列表',
                   id: 200,
                   order: 2,
-                  path: 'goods'
-                },
-                {
-                  authName: '分类列表',
-                  id: 199,
-                  order: 2,
-                  path: 'classify'
+                  path: 'list'
                 },
                 {
                   authName: '商品分类',
@@ -185,10 +179,16 @@ export default {
               path: 'reports',
               children: [
                 {
-                  authName: '数据报表',
+                  authName: '示例',
                   id: 245,
                   order: 2,
                   path: 'reports'
+                },
+                {
+                  authName: '疫情图',
+                  id: 945,
+                  order: 2,
+                  path: 'map'
                 }
               ]
             }

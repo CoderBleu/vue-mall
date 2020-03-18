@@ -140,9 +140,11 @@
       :visible.sync="setRolesdialogVisible"
       width="50%"
     >
-      <div >
+      <div>
         <p>当前的用户：{{ userInfo.name }}</p>
-        <p v-if="userInfo.roles != null">当前的角色：{{ userInfo.roles.roleName }}</p>
+        <p v-if="userInfo.roles != null">
+          当前的角色：{{ userInfo.roles.roleName }}
+        </p>
         <p v-else>当前的角色：暂无</p>
         <p>
           分配新角色：
@@ -339,13 +341,11 @@ export default {
     addUser() {
       this.$refs.addFormRef.validate(valid => {
         if (valid) {
-          // && this.addUserForm.id !== ''
           if (this.addUserForm.id !== null) {
             this.changeUserFormData()
-            this.$message.success('修改成功')
-          } else {
-            this.changeUserFormData()
             this.$message.success('添加成功')
+          } else {
+            this.$message.success('更新成功')
           }
           // 方式一：但是兼容性不好，在ie浏览器没用
           // var params = new URLSearchParams()

@@ -7,6 +7,10 @@ import Users from '../components/user/users.vue'
 import Rights from '../components/power/Rights.vue'
 import Roles from '../components/power/Roles.vue'
 import Cate from '../components/goods/Cate.vue'
+import List from '../components/goods/List.vue'
+import Order from '../components/orders/Order.vue'
+import Reports from '../components/reports/Report.vue'
+import Map from '../components/reports/Map.vue'
 
 Vue.use(VueRouter)
 
@@ -43,13 +47,30 @@ const routes = [
       {
         path: '/categories',
         component: Cate
+      },
+      {
+        path: '/list',
+        component: List
+      },
+      {
+        path: '/reports',
+        component: Reports
+      },
+      {
+        path: '/orders',
+        component: Order
+      },
+      {
+        path: '/map',
+        component: Map
       }
     ]
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 // 挂载路由导航守卫
