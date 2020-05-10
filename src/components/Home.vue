@@ -78,7 +78,8 @@ export default {
         103: 'el-icon-lock',
         101: 'el-icon-shopping-bag-2',
         102: 'el-icon-shopping-cart-full',
-        145: 'el-icon-tickets'
+        145: 'el-icon-tickets',
+        175: 'el-icon-camera'
       },
       isCollapse: false
     }
@@ -189,6 +190,26 @@ export default {
                   id: 945,
                   order: 2,
                   path: 'map'
+                }
+              ]
+            },
+            {
+              authName: '人脸识别',
+              id: 175,
+              order: 1,
+              path: 'reports',
+              children: [
+                {
+                  authName: '人脸注册',
+                  id: 285,
+                  order: 2,
+                  path: 'register'
+                },
+                {
+                  authName: '人脸登录',
+                  id: 985,
+                  order: 2,
+                  path: 'discern'
                 }
               ]
             }

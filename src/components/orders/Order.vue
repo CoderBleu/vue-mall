@@ -159,7 +159,7 @@ export default {
           consignee_addr:
             'a:7:{s:6:"cgn_id";i:1;s:7:"user_id";i:133;s:8:"cgn_name";s:9:"王二柱";s:11:"cgn_address";s:51:"北京市海淀区苏州街长远天地大厦305室";s:7:"cgn_tel";s:11:"13566771298";s:8:"cgn_code";s:6:"306810";s:11:"delete_time";N;}',
           pay_status: '1',
-          create_time: 1508331565,
+          create_time: '2020-03-01',
           update_time: 1508331565
         },
         {
@@ -176,7 +176,7 @@ export default {
           consignee_addr:
             'a:7:{s:6:"cgn_id";i:1;s:7:"user_id";i:133;s:8:"cgn_name";s:9:"王二柱";s:11:"cgn_address";s:51:"北京市海淀区苏州街长远天地大厦305室";s:7:"cgn_tel";s:11:"13566771298";s:8:"cgn_code";s:6:"306810";s:11:"delete_time";N;}',
           pay_status: '0',
-          create_time: 1308331865,
+          create_time: '2020-03-04',
           update_time: 1308331865
         }
       ]

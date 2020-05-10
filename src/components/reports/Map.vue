@@ -12,7 +12,7 @@ import jsonp from 'jsonp'
 
 const option = {
   title: {
-    text: '模拟疫情地图'
+    text: '模拟二月份疫情地图'
   },
   visualMap: [
     {

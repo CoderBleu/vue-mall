@@ -270,13 +270,11 @@ export default {
       this.getUserList()
     },
     getUserList() {
-      console.log(this.queryInfo)
       this.$axios
         .get('http://localhost:8081/users/', {
           params: this.queryInfo
         })
         .then(res => {
-          console.log(res.data)
           if (res.data.code === 200) {
             this.userList = res.data.data
             for (const item of this.userList) {
@@ -315,7 +313,6 @@ export default {
       }
     },
     changeStatus(userInfo) {
-      console.log(userInfo)
       this.$axios
         .put(
           `http://localhost:8081/users/changeStatus?id=${userInfo.id}&status=${userInfo.status}`
@@ -441,7 +438,6 @@ export default {
       this.$axios.get('http://localhost:8081/roles/list').then(res => {
         if (res.data.code === 200) {
           this.setRoles = res.data.data
-          console.log(this.setRoles)
           // 打开对话框后所有权限树
         }
       })
